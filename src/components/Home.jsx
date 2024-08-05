@@ -11,7 +11,6 @@ function Home() {
                         className="img-fluid"
                         style={{ maxWidth: '100%', height: 'auto' }}
                     />
-            <h1>Brothers Guitars </h1>
             </>
     );
 }
