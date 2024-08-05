@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is import
 
 function Home() {
     return (
-        
         <div className="container-fluid">
             <div className="row justify-content-center align-items-center" style={{ height: '100vh' }}>
                 <div className="col-md-8 d-flex justify-content-center">
@@ -16,6 +15,7 @@ function Home() {
                     />
                 </div>
             </div>
+            <h1>Brothers Guitars </h1>
             
         </div>
     );
