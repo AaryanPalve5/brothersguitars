@@ -8,7 +8,7 @@ function Home() {
             <div className="row justify-content-center align-items-center" style={{ height: '100vh' }}>
                 <div className="col-md-8 d-flex justify-content-center">
                     <img
-                        src="/src/assets/brothersguitarslogo.jpeg"
+                        src="src\components\brothersguitarslogo.jpeg"
                         alt="Brothers Guitars Logo"
                         className="img-fluid"
                         style={{ maxWidth: '100%', height: 'auto' }}
