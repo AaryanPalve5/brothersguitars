@@ -6,7 +6,7 @@ function Home() {
     return (
         <>
        <img
-                        src="brothersguitarslogo.jpeg"
+                        src="/brothersguitarslogo.jpeg"
                         alt="Brothers Guitars Logo"
                         className="img-fluid"
                         style={{ maxWidth: '100%', height: 'auto' }}
