@@ -4,43 +4,40 @@ import { FaInstagram, FaFacebookF, FaPhoneAlt, FaMapMarkerAlt } from 'react-icon
 
 function ContactUs() {
     const styles = {
-        bodyHtml: {
-            margin: 0,
-            padding: 0,
-        },
-        footer: {
-            margin: 0,
-            padding: 0,
-        },
         container: {
             backgroundColor: '#000',
             color: '#fff',
         },
         heading: {
-            fontFamily: 'Times New Roman',
+            fontFamily: 'Times New Roman, serif',
             color: '#fff',
-            fontSize: '3em',
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            marginBottom: '1.5rem',
         },
         subHeading: {
-            fontFamily: 'Times New Roman',
+            fontFamily: 'Times New Roman, serif',
             color: '#fff',
-            fontSize: '1.5em',
+            fontSize: '1.5rem',
+            fontWeight: 'bold',
+            marginBottom: '1rem',
         },
         text: {
-            fontFamily: 'Times New Roman',
+            fontFamily: 'Times New Roman, serif',
             color: '#fff',
-            fontSize: '1.2em',
+            fontSize: '1.1rem',
+            lineHeight: '1.6',
         },
         icon: {
-            marginRight: '15px',
-            fontSize: '1.5em',
+            marginRight: '10px',
+            fontSize: '1.5rem',
         },
         map: {
             position: 'relative',
             paddingTop: '56.25%',
             height: '0',
             overflow: 'hidden',
-            marginBottom: '2em',
+            marginBottom: '2rem',
         },
         mapIframe: {
             position: 'absolute',
@@ -51,42 +48,42 @@ function ContactUs() {
             border: '0',
         },
         footerText: {
-            fontFamily: 'Times New Roman',
+            fontFamily: 'Times New Roman, serif',
             color: '#fff',
-            fontSize: '1.5em',
-            margin: '0',
+            fontSize: '1.2rem',
+            margin: '1.5rem 0',
         },
     };
 
     return (
         <div id="contact-us" className="container-fluid p-0" style={styles.container}>
             <div className="container mt-5">
-                <h1 className="text-center mb-4" style={styles.heading}>Contact Us</h1>
+                <h1 className="text-center" style={styles.heading}>Contact Us</h1>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="contact-info">
                             <h4 className="mb-4" style={styles.subHeading}>Get in Touch</h4>
                             <p style={styles.text}>
-                                <a href="tel:09823274939" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2em' }}>
+                                <a href="tel:09823274939" style={{ color: '#fff', textDecoration: 'none' }}>
                                     <FaPhoneAlt style={styles.icon} />
-                                    <span style={styles.text}>098232 74939</span>
+                                    098232 74939
                                 </a>
                             </p>
                             <p style={styles.text}>
-                                <a href="https://www.instagram.com/brothers_guitars?igsh=emVtb3V0ZTg1MjZq" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2em' }}>
-                                    <FaInstagram style={{ marginRight: '10px', fontSize: '1.5em' }} />
+                                <a href="https://www.instagram.com/brothers_guitars?igsh=emVtb3V0ZTg1MjZq" style={{ color: '#fff', textDecoration: 'none' }}>
+                                    <FaInstagram style={styles.icon} />
                                     brothers_guitars
                                 </a>
                             </p>
                             <p style={styles.text}>
-                                <a href="https://www.facebook.com/brothersguitars.india" style={{ color: '#fff', textDecoration: 'none', fontSize: '1.2em' }}>
-                                    <FaFacebookF style={{ marginRight: '10px', fontSize: '1.5em' }} />
+                                <a href="https://www.facebook.com/brothersguitars.india" style={{ color: '#fff', textDecoration: 'none' }}>
+                                    <FaFacebookF style={styles.icon} />
                                     brothersguitars.india
                                 </a>
                             </p>
                             <p style={styles.text}>
                                 <FaMapMarkerAlt style={styles.icon} />
-                                <span style={styles.text}>Shop No.1, Sector 32A, La Casita, near Prathamesh Wines, Ravet, Pune, Maharashtra 412101</span>
+                                Shop No.1, Sector 32A, La Casita, near Prathamesh Wines, Ravet, Pune, Maharashtra 412101
                             </p>
                         </div>
                     </div>
@@ -104,7 +101,7 @@ function ContactUs() {
                         </div>
                     </div>
                 </div>
-                <footer className="text-center mt-0 mb-4" style={styles.footerText}>
+                <footer className="text-center" style={styles.footerText}>
                     <p>&copy; BrothersGuitars 2024. All rights reserved.</p>
                 </footer>
             </div>
