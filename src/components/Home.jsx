@@ -1,13 +1,13 @@
-// src/pages/Home.jsx
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import logo from '../assets/brothersguitarslogo.jpeg';
 
 function Home() {
     return (
-        <div  className="container-fluid d-flex justify-content-center align-items-center min-vh-100 p-4">
+        <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 p-4">
             <div className="text-center">
-                <img
-                    src="dist\images\brothersguitarslogo.jpeg"
+                <img 
+                    src={logo} // Reference the image directly
                     alt="Brothers Guitars Logo"
                     className="img-fluid"
                     style={{ maxWidth: '90%', height: 'auto' }}
