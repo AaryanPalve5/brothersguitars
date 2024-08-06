@@ -7,7 +7,7 @@ function Home() {
         <div  className="container-fluid d-flex justify-content-center align-items-center min-vh-100 p-4">
             <div className="text-center">
                 <img
-                    src="dist\brothersguitarslogo.jpeg"
+                    src="dist\images\brothersguitarslogo.jpeg"
                     alt="Brothers Guitars Logo"
                     className="img-fluid"
                     style={{ maxWidth: '90%', height: 'auto' }}
