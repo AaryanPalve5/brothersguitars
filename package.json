@@ -2,9 +2,7 @@
   "name": "brothersguitars",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "homepage": "https://aaryanpalve5.github.io/brothersguitars",
-  "scripts": {
+  "type": "module",  "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
