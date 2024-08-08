@@ -4,14 +4,17 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is import
 
 const Reviews = () => {
     const hasReviews = reviewsData.length > 3;
+    const sectionStyle = {
+        minHeight: '400px', // Adjust the minimum height to keep the area consistent
+    };
 
     return (
-        <section id="reviews" className="container my-4">
+        <section id="reviews" className="container my-4" style={sectionStyle}>
             <h2 className="text-center mb-4" style={{ fontSize: '2rem', color: '#333' }}>
-                Testimonials &  Reviews
+                Testimonials & Reviews
             </h2>
             {hasReviews ? (
-                <div id="reviewsCarousel" className="carousel slide">
+                <div id="reviewsCarousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         {reviewsData.map((review, index) => (
                             <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
