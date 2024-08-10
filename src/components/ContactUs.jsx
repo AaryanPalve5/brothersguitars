@@ -1,6 +1,6 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
-import { FaInstagram, FaFacebookF, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'; // Import icons from react-icons
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaInstagram, FaFacebookF, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 function ContactUs() {
     const styles = {
@@ -8,6 +8,18 @@ function ContactUs() {
             backgroundColor: '#000',
             color: '#fff',
             padding: '0',
+            margin: '0',
+            width: '100%',
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            overflowX: 'hidden', // Prevent horizontal overflow
+        },
+        contentContainer: {
+            flex: '1',
+            padding: '0 15px',
+            margin: '0', // Ensure no extra margin is added
+            overflowX: 'hidden', // Prevent horizontal overflow for the content
         },
         heading: {
             fontFamily: 'Times New Roman, serif',
@@ -15,6 +27,8 @@ function ContactUs() {
             fontSize: '2.5rem',
             fontWeight: 'bold',
             marginBottom: '1.5rem',
+            textAlign: 'center',
+            paddingTop: '2rem',
         },
         subHeading: {
             fontFamily: 'Times New Roman, serif',
@@ -28,10 +42,13 @@ function ContactUs() {
             color: '#fff',
             fontSize: '1.1rem',
             lineHeight: '1.6',
+            display: 'flex',
+            alignItems: 'center',
+            marginBottom: '1rem',
         },
         icon: {
             marginRight: '10px',
-            fontSize: '1.5rem',
+            fontSize: '1.7rem',
         },
         map: {
             position: 'relative',
@@ -52,14 +69,17 @@ function ContactUs() {
             fontFamily: 'Times New Roman, serif',
             color: '#fff',
             fontSize: '1.2rem',
-            margin: '1.5rem 0',
+            margin: '0', 
+            padding: '1rem 0', 
+            textAlign: 'center',
+            backgroundColor: '#000',
         },
     };
 
     return (
-        <div id="contact-us" className="container-fluid p-0" style={styles.container}>
-            <div className="container">
-                <h1 className="text-center mt-5" style={styles.heading}>Contact Us</h1>
+        <div id="contact-us" style={styles.container}>
+            <div className="container-fluid" style={styles.contentContainer}>
+                <h1 style={styles.heading}>Contact Us</h1>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="contact-info">
@@ -102,10 +122,10 @@ function ContactUs() {
                         </div>
                     </div>
                 </div>
-                <footer className="text-center" style={styles.footerText}>
-                    <p>&copy; BrothersGuitars 2024. All rights reserved.</p>
-                </footer>
             </div>
+            <footer style={styles.footerText}>
+                <p>&copy; BrothersGuitars 2024. All rights reserved.</p>
+            </footer>
         </div>
     );
 }

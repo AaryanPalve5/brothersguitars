@@ -1,28 +1,25 @@
-// src/App.jsx
-import React from 'react';
-import Home from './components/Home';
-import Navbar from './components/Navbar'; 
-import Reviews from './components/Reviews'; 
-import Products from './components/Products';
-import Classes from './components/Classes'; 
-// Adjust the path based on your structure
-
-import ContactUs from './components/ContactUs';
-
+import React, { Suspense, lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+// Lazy load the components
+const Navbar = lazy(() => import('./components/Navbar'));
+const Home = lazy(() => import('./components/Home'));
+const Products = lazy(() => import('./components/Products'));
+const Classes = lazy(() => import('./components/Classes'));
+const Reviews = lazy(() => import('./components/Reviews'));
+const ContactUs = lazy(() => import('./components/ContactUs'));
 
 function App() {
     return (
-        <div>
+        <Suspense fallback={<div>Loading...</div>}>
             <Navbar />
             <Home />
             <Products />
-            <Classes/>
+            <Classes />
             <Reviews />
             <ContactUs />
-        </div>
+        </Suspense>
     );
 }
 
