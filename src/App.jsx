@@ -3,6 +3,8 @@ import React from 'react';
 import Home from './components/Home';
 import Navbar from './components/Navbar'; 
 import Reviews from './components/Reviews'; 
+import Products from './components/Products';
+import Classes from './components/Classes'; 
 // Adjust the path based on your structure
 
 import ContactUs from './components/ContactUs';
@@ -16,7 +18,8 @@ function App() {
         <div>
             <Navbar />
             <Home />
-
+            <Products />
+            <Classes/>
             <Reviews />
             <ContactUs />
         </div>

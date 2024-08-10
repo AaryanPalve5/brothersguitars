@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,10 +15,10 @@ const Navbar = () => {
               <a className="nav-link" href="#home">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#our-store">Our Store</a>
+              <a className="nav-link" href="#products">Our Store</a> {/* Updated ID */}
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#our-classes">Our Classes</a>
+              <a className="nav-link" href="#classes">Our Classes</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#contact-us">Contact Us</a>

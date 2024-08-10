@@ -7,6 +7,7 @@ function ContactUs() {
         container: {
             backgroundColor: '#000',
             color: '#fff',
+            padding: '0',
         },
         heading: {
             fontFamily: 'Times New Roman, serif',
@@ -57,8 +58,8 @@ function ContactUs() {
 
     return (
         <div id="contact-us" className="container-fluid p-0" style={styles.container}>
-            <div className="container mt-5">
-                <h1 className="text-center" style={styles.heading}>Contact Us</h1>
+            <div className="container">
+                <h1 className="text-center mt-5" style={styles.heading}>Contact Us</h1>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="contact-info">
