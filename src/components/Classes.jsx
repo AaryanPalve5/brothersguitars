@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import guitar1 from '../assets/guitarc.jpg';
+import gutiarclass from '../assets/gutiarclass.jpg';
 import drums1 from '../assets/drums.jpg';
 import flute1 from '../assets/flute2.jpg';
 import keyboard1 from '../assets/keyboard3.jpg';
@@ -13,7 +13,7 @@ const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&di
 
 const Classes = () => {
     const classList = [
-        { id: 1, name: "Guitar & Ukulele", imgSrc: guitar1, online: true },
+        { id: 1, name: "Guitar & Ukulele", imgSrc: gutiarclass, online: true },
         { id: 2, name: "Drums", imgSrc: drums1, online: false },
         { id: 3, name: "Vocals", imgSrc: mic, online: false },
         { id: 4, name: "Keyboard", imgSrc: keyboard1, online: false }, 
@@ -128,8 +128,16 @@ const Classes = () => {
             </div>
             <div className="row" style={infoStyle}>
                 <div className="col-lg-8 col-md-7">
-                    <p style={infoTextStyle}>
+                <p style={infoTextStyle}>
                         We conduct regular certification exams and are also affiliated with the Rock School of London.
+                    </p>
+
+                    <p style={infoTextStyle}>
+                        We have supplied musical instruments to 
+                        <li>The Academy School</li>
+                        <li>Kendriya Vidyalaya</li>
+                        <li>GG Internation</li>
+
                     </p>
                 </div>
                 <div className="col-lg-4 col-md-5 d-flex align-items-center">

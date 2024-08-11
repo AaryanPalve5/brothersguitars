@@ -3,29 +3,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa'; // Import icons
 import repair1 from '../assets/repair1.jpg'; 
 import repair2 from '../assets/repair2.jpg'; 
-import manufactured1 from '../assets/manufactured1.jpg'; 
+import repair3 from '../assets/repair3.jpg';  
+import repair4 from '../assets/repair4.jpg';  
+import repair5 from '../assets/repair5.jpg'; 
+import repair6 from '../assets/repair6.jpg'; 
+import violin1 from '../assets/manufactured1.jpg'; 
 import manufactured2 from '../assets/violin.jpg'; 
 import manufactured3 from '../assets/manufactured3.jpg'; 
 import guitarHolder1 from '../assets/GuitarHolder.jpg'; 
 import guitarHolder2 from '../assets/GuitarHolders.jpg'; 
 import guitarHolder3 from '../assets/GuitarHoldersBunch.jpg'; 
 import guitarStand from '../assets/GuitarStand.jpg'; 
+import pick from '../assets/pick.jpg'; 
+import ssg from '../assets/singlestring.jpg'; 
+import ssg2 from '../assets/singlestring2.jpg'; 
 
 const RepairsAndManufactured = () => {
     const repairs = [
         { id: 1, imgSrc: repair1 },
         { id: 2, imgSrc: repair2 },
+        { id: 3, imgSrc: repair3 },
+        { id: 4, imgSrc: repair4 },
+        { id: 5, imgSrc: repair5 },
+        { id: 6, imgSrc: repair6 },
+    ];
+    
+    const customization = [
+        { id: 7, imgSrc: violin1 },
+        { id: 8, imgSrc: manufactured2 },
+        { id: 9, imgSrc: manufactured3 },
+        { id: 16, imgSrc: ssg2 },
     ];
 
     const manufactured = [
-        { id: 3, imgSrc: manufactured1 },
-        { id: 4, imgSrc: manufactured2 },
-        { id: 5, imgSrc: manufactured3 },
-        { id: 6, imgSrc: guitarHolder1 },
-        { id: 7, imgSrc: guitarHolder2 },
-        { id: 8, imgSrc: guitarHolder3 },
-        { id: 9, imgSrc: guitarStand }
+        { id: 10, imgSrc: guitarHolder1 },
+        { id: 11, imgSrc: guitarHolder2 },
+        { id: 12, imgSrc: guitarHolder3 },
+        { id: 13, imgSrc: guitarStand },
+        { id: 14, imgSrc: pick },
+        { id: 15, imgSrc: ssg },
     ];
+    
 
     // Font URL for Roboto
     const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
@@ -118,6 +136,27 @@ const RepairsAndManufactured = () => {
                 ))}
             </div>
 
+            <h2 style={sectionTitleStyle}>CUSTOMIZATION</h2>
+            <div className="row justify-content-start">
+                {customization.map(item => (
+                    <div key={item.id} className="col-md-4 col-sm-6 mb-4">
+                        <div className="card" style={cardStyle}>
+                            <div style={imgWrapperStyle}>
+                                <img 
+                                    src={item.imgSrc} 
+                                    alt="Customization item" 
+                                    style={imgStyle} 
+                                    loading="lazy" 
+                                />
+                            </div>
+                            <div className="card-body" style={cardBodyStyle}>
+                                {/* Title left blank as per requirement */}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
             <h2 style={sectionTitleStyle}>MANUFACTURED BY US</h2>
             <div className="row justify-content-start">
                 {manufactured.map(item => (
@@ -138,8 +177,6 @@ const RepairsAndManufactured = () => {
                     </div>
                 ))}
             </div>
-
-            
 
             <link href={fontUrl} rel="stylesheet" /> {/* Include the font */}
         </div>
