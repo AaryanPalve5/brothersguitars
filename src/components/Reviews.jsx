@@ -1,7 +1,8 @@
 import React from 'react';
 import reviewsData from './reviews.json'; // Adjust the path based on where you saved the JSON file
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
-
+const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+    
 const Reviews = () => {
     const hasReviews = reviewsData.length > 3;
     const sectionStyle = {
@@ -11,7 +12,7 @@ const Reviews = () => {
     return (
         <section id="reviews" className="container my-4" style={sectionStyle}>
             <h2 className="text-start mb-4" style={{ 
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Roboto,Playfair Display, serif',
         fontWeight: 700, // Bold
         textAlign: 'left',
         color: '#333',
@@ -31,16 +32,16 @@ const Reviews = () => {
                                 <div className="d-flex justify-content-center">
                                     <div className="card p-4 border-0 shadow" style={{ backgroundColor: '#f5f5f5', width: '80%', textAlign: 'left' }}>
                                         <p className="card-text" style={{ 
-                                            fontStyle: 'italic', 
+                                            fontStyle: 'normal', 
                                             fontSize: '1.1rem',
-                                            fontFamily: 'Playfair Display, serif'
+                                            fontFamily: 'Roboto,Playfair Display, serif'
                                         }}>
                                             "{review.review}"
                                         </p>
                                         <footer className="mt-2" style={{ 
                                             fontSize: '1rem', 
                                             color: '#555', 
-                                            fontFamily: 'Playfair Display, serif'
+                                            fontFamily: 'Roboto,Playfair Display, serif'
                                         }}>
                                             - {review.name}
                                         </footer>
@@ -100,16 +101,16 @@ const Reviews = () => {
                                 textAlign: 'left' 
                             }}>
                                 <p className="card-text" style={{ 
-                                    fontStyle: 'italic', 
+                                    fontStyle: 'normal', 
                                     fontSize: '1.1rem',
-                                    fontFamily: 'Playfair Display, serif'
+                                    fontFamily: 'Roboto,Playfair Display, serif'
                                 }}>
                                     "{review.review}"
                                 </p>
                                 <footer className="mt-2" style={{ 
                                     fontSize: '1rem', 
                                     color: '#555', 
-                                    fontFamily: 'Playfair Display, serif'
+                                    fontFamily: 'Roboto,Playfair Display, serif'
                                 }}>
                                     - {review.name}
                                 </footer>

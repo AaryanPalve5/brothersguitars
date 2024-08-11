@@ -43,10 +43,7 @@ function Home() {
                     className="img-fluid"
                     style={{ maxWidth: '200%', height: 'auto' }} // Adjust size as needed
                 />
-                <h4 className="mt-3" style={{fontFamily: "Playfair Display", fontStyle: 'italic', color: 'black', textShadow: '1px 1px 5px white' }}>
-                    Start your musical journey with us
                 
-                </h4>
             </div>
         </div>
     );

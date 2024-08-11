@@ -2,6 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaInstagram, FaFacebookF, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
+// Font URL for Roboto
+const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap";
+
 function ContactUs() {
     const styles = {
         container: {
@@ -14,6 +17,7 @@ function ContactUs() {
             display: 'flex',
             flexDirection: 'column',
             overflowX: 'hidden', // Prevent horizontal overflow
+            fontFamily: 'Roboto, sans-serif',
         },
         contentContainer: {
             flex: '1',
@@ -22,9 +26,8 @@ function ContactUs() {
             overflowX: 'hidden', // Prevent horizontal overflow for the content
         },
         heading: {
-            fontFamily: 'Playfair Display, serif',
+            fontFamily: 'Roboto, sans-serif',
             fontWeight: 700, // Bold
-            fontStyle: 'normal', // Less italic
             textAlign: 'left',
             color: 'white',
             marginBottom: '2rem',
@@ -34,14 +37,14 @@ function ContactUs() {
             paddingTop: '2rem',
         },
         subHeading: {
-            fontFamily: 'Playfair Display,Times New Roman, serif',
+            fontFamily: 'Roboto, sans-serif',
             color: '#fff',
             fontSize: '1.5rem',
-            fontWeight: 'bold',
+            fontWeight: 700, // Bold
             marginBottom: '1rem',
         },
         text: {
-            fontFamily: 'Playfair Display,Times New Roman, serif',
+            fontFamily: 'Roboto, sans-serif',
             color: '#fff',
             fontSize: '1.1rem',
             lineHeight: '1.6',
@@ -69,7 +72,7 @@ function ContactUs() {
             border: '0',
         },
         footerText: {
-            fontFamily: 'Playfair Display,Times New Roman, serif',
+            fontFamily: 'Roboto, sans-serif',
             color: '#fff',
             fontSize: '1.2rem',
             margin: '0', 
@@ -82,7 +85,7 @@ function ContactUs() {
     return (
         <div id="contact-us" style={styles.container}>
             <div className="container-fluid" style={styles.contentContainer}>
-                <h1 style={styles.heading}>CONTACT  US</h1>
+                <h1 style={styles.heading}>CONTACT US</h1>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="contact-info">
@@ -129,6 +132,7 @@ function ContactUs() {
             <footer style={styles.footerText}>
                 <p>&copy; BrothersGuitars 2024. All rights reserved.</p>
             </footer>
+            <link href={fontUrl} rel="stylesheet" /> {/* Include the font */}
         </div>
     );
 }

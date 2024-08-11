@@ -20,18 +20,18 @@ const Products = () => {
         { id: 7, name: "Amplifier", imgSrc: amp }
     ];
 
-    // Font URL
-    const fontUrl = "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap";
+    // Font URL for Roboto
+    const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
     
     // Inline styles
     const containerStyle = {
         marginTop: '5rem',
         marginBottom: '5rem',
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Roboto, sans-serif',
     };
 
     const titleStyle = {
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Roboto, sans-serif',
         fontWeight: 700, // Bold
         fontStyle: 'normal', // Less italic
         textAlign: 'left',
@@ -60,7 +60,7 @@ const Products = () => {
     };
 
     const textStyle = {
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Roboto, sans-serif',
         fontSize: '1.25rem', // Larger font size
         fontWeight: 700, // Bold
         color: '#333',
@@ -86,7 +86,7 @@ const Products = () => {
                         <div className="card" style={cardStyle}>
                             <img src={product.imgSrc} className="card-img-top" alt={product.name} style={imgStyle} />
                             <div className="card-body">
-                                <h5 className="card-title" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700 }}>{product.name}</h5>
+                                <h5 className="card-title" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700 }}>{product.name}</h5>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,6 @@ const Products = () => {
                     <FaInstagram style={iconStyle} />brothers_guitars
                 </a>
                 <br/>
-                
                 <a href="https://www.facebook.com/brothersguitars.india" style={{ color: '#333', textDecoration: 'none' }}>
                     <FaFacebookF style={iconStyle} />brothersguitars.india
                 </a>

@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import guitar1 from '../assets/guitarc.jpg';
 import drums1 from '../assets/drums.jpg';
 import flute1 from '../assets/flute2.jpg';
-import keyboard1 from '../assets/keyboard2.png';
+import keyboard1 from '../assets/keyboard3.jpg';
 import tabla from '../assets/tabla.jpg';
 import mic from '../assets/mic1.jpg';
 import certificationImg from '../assets/rsl.jpg'; // Add your image here
 
-// Font URL
-const fontUrl = "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap";
+// Font URL for Roboto
+const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
 
 const Classes = () => {
     const classList = [
@@ -25,11 +25,11 @@ const Classes = () => {
     const sectionStyle = {
         padding: '40px 0',
         backgroundColor: '#f8f9fa',
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Roboto, sans-serif',
     };
 
     const titleStyle = {
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Roboto, sans-serif',
         fontWeight: 700, // Bold
         textAlign: 'left',
         color: '#333',
@@ -79,7 +79,7 @@ const Classes = () => {
     };
 
     const infoTextStyle = {
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Roboto, sans-serif',
         fontWeight: 500,
         color: 'black',
         fontSize: '1.35rem',
@@ -110,7 +110,7 @@ const Classes = () => {
                                 loading="lazy" 
                             />
                             <div className="card-body" style={cardBodyStyle}>
-                                <h5 className="card-title" style={{ fontFamily: 'Playfair Display, serif', fontWeight: 700 }}>{item.name}</h5>
+                                <h5 className="card-title" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700 }}>{item.name}</h5>
                                 <div className="btn-group w-100" role="group" style={btnGroupStyle}>
                                     {item.online ? (
                                         <>
