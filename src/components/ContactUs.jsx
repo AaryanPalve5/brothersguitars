@@ -22,23 +22,26 @@ function ContactUs() {
             overflowX: 'hidden', // Prevent horizontal overflow for the content
         },
         heading: {
-            fontFamily: 'Times New Roman, serif',
-            color: '#fff',
-            fontSize: '2.5rem',
-            fontWeight: 'bold',
-            marginBottom: '1.5rem',
-            textAlign: 'center',
+            fontFamily: 'Playfair Display, serif',
+            fontWeight: 700, // Bold
+            fontStyle: 'normal', // Less italic
+            textAlign: 'left',
+            color: 'white',
+            marginBottom: '2rem',
+            wordSpacing: '0.5em',
+            fontSize: '2rem', // Increased font size
+            letterSpacing: '-1px',
             paddingTop: '2rem',
         },
         subHeading: {
-            fontFamily: 'Times New Roman, serif',
+            fontFamily: 'Playfair Display,Times New Roman, serif',
             color: '#fff',
             fontSize: '1.5rem',
             fontWeight: 'bold',
             marginBottom: '1rem',
         },
         text: {
-            fontFamily: 'Times New Roman, serif',
+            fontFamily: 'Playfair Display,Times New Roman, serif',
             color: '#fff',
             fontSize: '1.1rem',
             lineHeight: '1.6',
@@ -66,7 +69,7 @@ function ContactUs() {
             border: '0',
         },
         footerText: {
-            fontFamily: 'Times New Roman, serif',
+            fontFamily: 'Playfair Display,Times New Roman, serif',
             color: '#fff',
             fontSize: '1.2rem',
             margin: '0', 
@@ -79,7 +82,7 @@ function ContactUs() {
     return (
         <div id="contact-us" style={styles.container}>
             <div className="container-fluid" style={styles.contentContainer}>
-                <h1 style={styles.heading}>Contact Us</h1>
+                <h1 style={styles.heading}>CONTACT  US</h1>
                 <div className="row">
                     <div className="col-md-6">
                         <div className="contact-info">

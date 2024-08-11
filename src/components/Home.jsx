@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
-import logo from '../assets/logo.jpeg';
-import background from '../assets/bgx.jpg';
+import logo from '../assets/logo.jpeg'; 
 
 function Home() {
     return (
@@ -12,7 +11,6 @@ function Home() {
             {/* Blurred Background */}
             <div 
                 style={{
-                    backgroundImage: `url(${background})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     position: 'absolute',
@@ -20,7 +18,7 @@ function Home() {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    filter: 'blur(2px)', // Apply blur to background only
+                    filter: 'blur(8px)', // Apply blur to background only
                     zIndex: 1,
                 }}
             ></div>
@@ -36,6 +34,7 @@ function Home() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
+                    // Adjust this value to move the logo higher
                 }}
             >
                 <img 
@@ -44,8 +43,9 @@ function Home() {
                     className="img-fluid"
                     style={{ maxWidth: '200%', height: 'auto' }} // Adjust size as needed
                 />
-                <h4 className="mt-3" style={{ fontStyle: 'italic', color: 'black', textShadow: '1px 1px 5px white' ,borderRadius: '5px'}}>
+                <h4 className="mt-3" style={{fontFamily: "Playfair Display", fontStyle: 'italic', color: 'black', textShadow: '1px 1px 5px white' }}>
                     Start your musical journey with us
+                
                 </h4>
             </div>
         </div>
