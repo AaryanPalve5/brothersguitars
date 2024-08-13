@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaInstagram, FaFacebookF, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
 // Font URL for Roboto
 const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap";
@@ -94,6 +94,12 @@ function ContactUs() {
                                 <a href="tel:09823274939" style={{ color: '#fff', textDecoration: 'none' }}>
                                     <FaPhoneAlt style={styles.icon} />
                                     098232 74939
+                                </a>
+                            </p>
+                            <p style={styles.text}>
+                                <a href="mailto:brothersguitars.india@gmail.com" style={{ color: '#fff', textDecoration: 'none' }}>
+                                    <FaEnvelope style={styles.icon} />
+                                    brothersguitars.india@gmail.com
                                 </a>
                             </p>
                             <p style={styles.text}>

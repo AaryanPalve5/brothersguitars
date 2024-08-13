@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import repair1 from '../assets/repair1.jpg'; 
 import repair2 from '../assets/repair2.jpg'; 
 import repair3 from '../assets/repair3.jpg';  
 import repair4 from '../assets/repair4.jpg';  
 import repair5 from '../assets/repair5.jpg'; 
 import repair6 from '../assets/repair6.jpg'; 
-import violin1 from '../assets/manufactured1.jpg'; 
+import viol from '../assets/viol.jpg'; 
 import manufactured2 from '../assets/violin.jpg'; 
 import manufactured3 from '../assets/manufactured3.jpg'; 
 import guitarHolder1 from '../assets/GuitarHolder.jpg'; 
@@ -16,6 +17,7 @@ import guitarStand from '../assets/GuitarStand.jpg';
 import pick from '../assets/pick.jpg'; 
 import ssg from '../assets/singlestring.jpg'; 
 import ssg2 from '../assets/singlestring2.jpg'; 
+import bass from '../assets/bass.jpg'; 
 
 const RepairsAndManufactured = () => {
     const repairs = [
@@ -28,15 +30,15 @@ const RepairsAndManufactured = () => {
     ];
     
     const customization = [
-        { id: 7, imgSrc: violin1 },
-        { id: 8, imgSrc: manufactured2 },
-        { id: 9, imgSrc: manufactured3 },
-        { id: 16, imgSrc: ssg2 },
+        { id: 7, imgSrc: viol },
+        { id: 15, imgSrc: ssg },
+        { id: 16, imgSrc: bass },
     ];
 
     const manufactured = [
         { id: 10, imgSrc: guitarHolder1 },
         { id: 11, imgSrc: guitarHolder2 },
+        { id: 16, imgSrc: bass },
         { id: 12, imgSrc: guitarHolder3 },
         { id: 13, imgSrc: guitarStand },
         { id: 14, imgSrc: pick },
@@ -59,23 +61,23 @@ const RepairsAndManufactured = () => {
 
     const sectionTitleStyle = {
         fontFamily: 'Roboto, sans-serif',
-        fontWeight: 700, // Bold
-        fontStyle: 'normal', // Less italic
+        fontWeight: 700,
         textAlign: 'left',
         color: '#333',
         marginBottom: '2rem',
-        wordSpacing: '0.5em',
-        fontSize: '2rem', // Increased font size
-        letterSpacing: '-1px', // Increased letter spacing
+        wordSpacing: '0.35em',
+        fontSize: '2rem',
+        letterSpacing: '-1px',
     };
 
     const imgStyle = {
         width: '100%',
-        height: '450px', // Adjusted to make the carousel size consistent
+        height: '450px',
         objectFit: 'contain',
     };
+
     const buttonStyle = {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Lighter black with more transparency
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
         border: 'none',
         borderRadius: '50%',
         width: '3rem',
@@ -90,7 +92,6 @@ const RepairsAndManufactured = () => {
         top: '50%',
         transform: 'translateY(-50%)',
     };
-    
 
     const prevButtonStyle = {
         ...buttonStyle,
@@ -102,10 +103,39 @@ const RepairsAndManufactured = () => {
         right: '10px',
     };
 
+    useEffect(() => {
+        const repairCarousel = new bootstrap.Carousel(document.getElementById('repairsCarousel'), {
+            interval: 2000,
+            ride: 'carousel',
+            pause: false, // Disable pause on hover
+            wrap: true // Ensure it wraps around after the last slide
+        });
+
+        const customizationCarousel = new bootstrap.Carousel(document.getElementById('customizationCarousel'), {
+            interval: 2000,
+            ride: 'carousel',
+            pause: false,
+            wrap: true
+        });
+
+        const manufacturedCarousel = new bootstrap.Carousel(document.getElementById('manufacturedCarousel'), {
+            interval: 2000,
+            ride: 'carousel',
+            pause: false,
+            wrap: true
+        });
+
+        return () => {
+            repairCarousel.dispose();
+            customizationCarousel.dispose();
+            manufacturedCarousel.dispose();
+        };
+    }, []);
+
     return (
         <div id="repairs-and-manufactured" className="container" style={containerStyle}>
             <h2 style={sectionTitleStyle}>OUR REPAIRS</h2>
-            <div id="repairsCarousel" className="carousel slide" data-ride="carousel" style={carouselStyle}>
+            <div id="repairsCarousel" className="carousel slide" style={carouselStyle}>
                 <div className="carousel-inner">
                     {repairs.map((item, index) => (
                         <div key={item.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
@@ -114,15 +144,15 @@ const RepairsAndManufactured = () => {
                     ))}
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#repairsCarousel" data-bs-slide="prev" style={prevButtonStyle}>
-                    <span className="carousel-control-prev-icon" style={{ fontSize: '1.5rem' }}></span>
+                    <span className="carousel-control-prev-icon" style={{ fontSize: '1.5rem', color:'black'}}></span>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#repairsCarousel" data-bs-slide="next" style={nextButtonStyle}>
-                    <span className="carousel-control-next-icon" style={{ fontSize: '1.5rem' }}></span>
+                    <span className="carousel-control-next-icon" style={{ fontSize: '1.5rem', color:'black' }}></span>
                 </button>
             </div>
 
             <h2 style={sectionTitleStyle}>CUSTOMIZATION</h2>
-            <div id="customizationCarousel" className="carousel slide" data-ride="carousel" style={carouselStyle}>
+            <div id="customizationCarousel" className="carousel slide" style={carouselStyle}>
                 <div className="carousel-inner">
                     {customization.map((item, index) => (
                         <div key={item.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
@@ -139,7 +169,7 @@ const RepairsAndManufactured = () => {
             </div>
 
             <h2 style={sectionTitleStyle}>MANUFACTURED BY US</h2>
-            <div id="manufacturedCarousel" className="carousel slide" data-ride="carousel" style={carouselStyle}>
+            <div id="manufacturedCarousel" className="carousel slide" style={carouselStyle}>
                 <div className="carousel-inner">
                     {manufactured.map((item, index) => (
                         <div key={item.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>

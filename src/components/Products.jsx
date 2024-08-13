@@ -1,6 +1,11 @@
-// src/components/Products.js
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './Carousel.css'; // Import the CSS file
+
+// The rest of the code remains the same
+
 import { FaInstagram, FaFacebookF } from 'react-icons/fa'; // Import icons
 import guitar1 from '../assets/guitar1.jpg';
 import drums1 from '../assets/drums1.png';
@@ -29,7 +34,7 @@ const Products = () => {
         <div id="products" className="container my-5">
             <h2 style={{
                 fontFamily: 'Roboto, sans-serif',
-                fontWeight: 700, 
+                fontWeight: 700,
                 fontSize: '2rem',
                 color: '#333',
                 marginBottom: '2rem'
@@ -51,7 +56,7 @@ const Products = () => {
                 <a href="https://www.instagram.com/brothers_guitars" style={{ color: '#333', textDecoration: 'none' }}>
                     <FaInstagram style={{ fontSize: '1.75rem', margin: '0 15px' }} />brothers_guitars
                 </a>
-                <br/>
+                <br />
                 <a href="https://www.facebook.com/brothersguitars.india" style={{ color: '#333', textDecoration: 'none' }}>
                     <FaFacebookF style={{ fontSize: '1.75rem', margin: '0 15px' }} />brothersguitars.india
                 </a>
