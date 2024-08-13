@@ -134,7 +134,16 @@ const RepairsAndManufactured = () => {
 
     return (
         <div id="repairs-and-manufactured" className="container" style={containerStyle}>
-            <h2 style={sectionTitleStyle}>OUR REPAIRS</h2>
+            
+            <h2 style={{
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: 700,
+                fontSize: '2rem',
+                color: '#333',
+                marginBottom: '2rem'
+            }}>
+                OUR REPAIRS
+            </h2>
             <div id="repairsCarousel" className="carousel slide" style={carouselStyle}>
                 <div className="carousel-inner">
                     {repairs.map((item, index) => (
@@ -151,7 +160,16 @@ const RepairsAndManufactured = () => {
                 </button>
             </div>
 
-            <h2 style={sectionTitleStyle}>CUSTOMIZATION</h2>
+            
+            <h2 style={{
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: 700,
+                fontSize: '2rem',
+                color: '#333',
+                marginBottom: '2rem'
+            }}>
+                CUSTOMIZATION
+            </h2>
             <div id="customizationCarousel" className="carousel slide" style={carouselStyle}>
                 <div className="carousel-inner">
                     {customization.map((item, index) => (
@@ -168,7 +186,15 @@ const RepairsAndManufactured = () => {
                 </button>
             </div>
 
-            <h2 style={sectionTitleStyle}>MANUFACTURED BY US</h2>
+             <h2 style={{
+                fontFamily: 'Roboto, sans-serif',
+                fontWeight: 700,
+                fontSize: '2rem',
+                color: '#333',
+                marginBottom: '2rem'
+            }}>
+                MANUFACTURED BY US
+            </h2>
             <div id="manufacturedCarousel" className="carousel slide" style={carouselStyle}>
                 <div className="carousel-inner">
                     {manufactured.map((item, index) => (

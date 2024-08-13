@@ -37,7 +37,7 @@ const Classes = () => {
                 fontSize: '2rem',
                 color: '#333',
                 marginBottom: '2rem',
-                marginLeft: '1.75rem'
+                marginLeft: '0.75rem'
             }}>
                 OUR CLASSES
             </h2>
