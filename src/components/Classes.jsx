@@ -11,16 +11,17 @@ import certificationImg from '../assets/rsl.jpg'; // Add your image here
 // Font URL for Roboto
 const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
 
-const Classes = () => {
-    const classList = [
-        { id: 1, name: "Guitar & Ukulele", imgSrc: gutiarclass, online: true },
-        { id: 2, name: "Drums", imgSrc: drums1, online: false },
-        { id: 3, name: "Vocals", imgSrc: mic, online: false },
-        { id: 4, name: "Keyboard", imgSrc: keyboard1, online: false }, 
-        { id: 5, name: "Flute", imgSrc: flute1, online: false },
-        { id: 6, name: "Tabla", imgSrc: tabla, online: false }
-    ];
+// Data for carousel items
+const classList = [
+    { id: 1, name: "Guitar & Ukulele", imgSrc: gutiarclass },
+    { id: 2, name: "Drums", imgSrc: drums1 },
+    { id: 3, name: "Vocals", imgSrc: mic },
+    { id: 4, name: "Keyboard", imgSrc: keyboard1 }, 
+    { id: 5, name: "Flute", imgSrc: flute1 },
+    { id: 6, name: "Tabla", imgSrc: tabla }
+];
 
+const Classes = () => {
     // Inline styles
     const sectionStyle = {
         padding: '40px 0',
@@ -39,109 +40,98 @@ const Classes = () => {
         letterSpacing: '-1.5px', // Adjusted letter spacing
     };
 
-    const cardStyle = {
-        width: '100%',
-        maxWidth: '350px',
-        margin: '10px auto',
-        textAlign: 'left',
-        backgroundColor: '#ffffff', // Consistent background color
-        borderRadius: '10px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-        transition: 'transform 0.3s, box-shadow 0.3s',
-    };
-
     const imgStyle = {
         width: '100%',
-        height: '200px',
+        height: '300px', // Adjust height as needed
         objectFit: 'cover',
-        borderTopLeftRadius: '10px',
-        borderTopRightRadius: '10px',
-    };
-
-    const cardBodyStyle = {
-        padding: '1rem',
-    };
-
-    const btnGroupStyle = {
-        marginTop: '10px',
-        display: 'flex',
-        justifyContent: 'flex-start', // Align buttons to the start
-    };
-
-    const buttonStyle = {
-        textAlign: 'left',
-        width: 'auto', // Allow buttons to adjust width as needed
-    };
-
-    const infoStyle = {
-        padding: '40px 0',
-        backgroundColor: '#ffffff',
-    };
-
-    const infoTextStyle = {
-        fontFamily: 'Roboto, sans-serif',
-        fontWeight: 500,
-        color: 'black',
-        fontSize: '1.35rem',
-        margin:'20px',
-        maxWidth: '60%',
-    };
-
-    const infoImgStyle = {
-        padding:'10px',
-        width: '100%',
-        maxWidth: '500px', // Slightly larger than class cards
-        height: 'auto',
-        borderRadius: '10px',
     };
 
     return (
         <div id="classes" className="container" style={sectionStyle}>
             <h2 style={titleStyle} className="mb-4">OUR CLASSES</h2>
-            <div className="row">
-                {classList.map(item => (
-                    <div key={item.id} className="col-lg-4 col-md-6 col-sm-6 mb-4">
-                        <div className="card" style={cardStyle}>
-                            <img 
-                                src={item.imgSrc} 
-                                className="card-img-top" 
-                                alt={`${item.name} class`} 
-                                style={imgStyle} 
-                                loading="lazy" 
-                            />
-                            <div className="card-body" style={cardBodyStyle}>
-                                <h5 className="card-title" style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700 }}>{item.name}</h5>
-                                <div className="btn-group w-100" role="group" style={btnGroupStyle}>
-                                    {item.online ? (
-                                        <>
-                                            <button type="button" className="btn btn-primary" style={buttonStyle}>Offline</button>
-                                            <button type="button" className="btn btn-secondary" style={buttonStyle}>Online</button>
-                                        </>
-                                    ) : (
-                                        <button type="button" className="btn btn-primary w-100" style={buttonStyle}>Offline</button>
-                                    )}
+
+            <div id="classesCarousel" className="carousel slide">
+                <div className="carousel-inner">
+                    {classList.map((item, index) => (
+                        <div key={item.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                            <div className="d-flex justify-content-center align-items-center" style={{ height: '300px' }}>
+                                <img src={item.imgSrc} className="d-block w-100" alt={`${item.name} class`} style={imgStyle} />
+                                <div className="carousel-caption d-block" style={{ 
+                                    position: 'absolute',
+                                    bottom: '0',
+                                    left: '0',
+                                    right: '0',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.6)', // Dark background for text visibility
+                                    color: '#fff',
+                                    textAlign: 'center',
+                                    padding: '10px',
+                                    fontSize: '1rem'
+                                }}>
+                                    <h5 style={{ margin: 0 }}>{item.name}</h5>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#classesCarousel" data-bs-slide="prev" style={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Slightly visible background
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: '3rem',
+                    height: '3rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#fff',
+                    opacity: 0.8,
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                    position: 'absolute',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    left: '10px',
+                }}>
+                    <span style={{ fontSize: '1.5rem' }}>&lt;</span>
+                    <span className="visually-hidden"></span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#classesCarousel" data-bs-slide="next" style={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Slightly visible background
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: '3rem',
+                    height: '3rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#fff',
+                    opacity: 0.8,
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                    position: 'absolute',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    right: '10px',
+                }}>
+                    <span style={{ fontSize: '1.5rem' }}>&gt;</span>
+                    <span className="visually-hidden"></span>
+                </button>
             </div>
-            <div className="row" style={infoStyle}>
+
+            <div className="row" style={{ padding: '40px 0', backgroundColor: '#ffffff' }}>
                 <div className="col-lg-8 col-md-7">
-                <p style={infoTextStyle}>
+                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, color: 'black', fontSize: '1.35rem', margin: '20px', maxWidth: '60%' }}>
                         We conduct regular certification exams and are also affiliated with the Rock School of London.
                     </p>
 
-                    <p style={infoTextStyle}>
+                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, color: 'black', fontSize: '1.35rem', margin: '20px', maxWidth: '60%' }}>
                         We have supplied musical instruments to 
-                        <li>The Academy School</li>
-                        <li>Kendriya Vidyalaya</li>
-                        <li>GG Internation</li>
-
+                        <ul>
+                            <li>The Academy School</li>
+                            <li>Kendriya Vidyalaya</li>
+                            <li>GG Internation</li>
+                        </ul>
                     </p>
                 </div>
                 <div className="col-lg-4 col-md-5 d-flex align-items-center">
-                    <img src={certificationImg} alt="Certification" style={infoImgStyle} loading="lazy" />
+                    <img src={certificationImg} alt="Certification" style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '10px' }} loading="lazy" />
                 </div>
             </div>
             <link href={fontUrl} rel="stylesheet" /> {/* Include the font */}

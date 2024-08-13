@@ -1,7 +1,8 @@
+// src/components/Products.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa'; // Import icons
-import guitar1 from '../assets/electricguitar1.jpg';
+import guitar1 from '../assets/guitar1.jpg';
 import drums1 from '../assets/drums1.png';
 import flute1 from '../assets/flute1.png';
 import keyboard1 from '../assets/keyboard1.png';
@@ -9,6 +10,7 @@ import ukulele1 from '../assets/ukulele1.png';
 import acousticguitar1 from '../assets/acousticguitar1.png';
 import amp from '../assets/amp.jpg';
 import accessories from '../assets/accessories.jpg';
+import Carousel from './Carousel'; // Import the Carousel component
 
 // Data for carousel items
 const products = [
@@ -21,9 +23,6 @@ const products = [
     { id: 7, name: "Amplifier", imgSrc: amp },
     { id: 8, name: "Accessories", imgSrc: accessories }
 ];
-
-// Font URL for Roboto
-const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
 
 const Products = () => {
     return (
@@ -38,85 +37,7 @@ const Products = () => {
                 OUR PRODUCTS
             </h2>
 
-            <div id="productsCarousel" className="carousel slide">
-                <div className="carousel-inner">
-                    {products.map((product, index) => (
-                        <div key={product.id} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                            <div className="d-flex justify-content-center align-items-center" style={{ 
-                                position: 'cover',
-                                height: '400px', // Default height for mobile
-                                maxWidth: '100%',
-                                overflow: 'hidden',
-                                '@media (min-width: 768px)': { // Medium devices (tablets)
-                                    height: '400px'
-                                },
-                                '@media (min-width: 992px)': { // Large devices (desktops)
-                                    height: '500px'
-                                }
-                            }}>
-                                <img src={product.imgSrc} className="d-block w-100" alt={product.name} style={{ 
-                                    objectFit: 'cover',
-                                    height: '100%', 
-                                    width: 'auto' // Ensures aspect ratio is maintained
-                                }} />
-                                <div className="carousel-caption d-block" style={{ 
-                                    position: 'absolute',
-                                    bottom: '0',
-                                    left: '0',
-                                    right: '0',
-                                    backgroundColor: 'rgba(0, 0, 0, 0.6)', // Dark background for text visibility
-                                    color: '#fff',
-                                    textAlign: 'center',
-                                    padding: '10px',
-                                    fontSize: '1rem'
-                                }}>
-                                    <h5 style={{ margin: 0 }}>{product.name}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#productsCarousel" data-bs-slide="prev" style={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Slightly visible background
-                    border: 'none',
-                    borderRadius: '50%',
-                    width: '3rem',
-                    height: '3rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#fff',
-                    opacity: 0.8,
-                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-                    position: 'absolute',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    left: '10px',
-                }}>
-                    <span style={{ fontSize: '1.5rem' }}>&lt;</span>
-                    <span className="visually-hidden"></span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#productsCarousel" data-bs-slide="next" style={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Slightly visible background
-                    border: 'none',
-                    borderRadius: '50%',
-                    width: '3rem',
-                    height: '3rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#fff',
-                    opacity: 0.8,
-                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-                    position: 'absolute',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    right: '10px',
-                }}>
-                    <span style={{ fontSize: '1.5rem' }}>&gt;</span>
-                    <span className="visually-hidden"></span>
-                </button>
-            </div>
+            <Carousel items={products} /> {/* Use the Carousel component */}
 
             <h4 style={{
                 fontFamily: 'Roboto, sans-serif',
@@ -135,9 +56,8 @@ const Products = () => {
                     <FaFacebookF style={{ fontSize: '1.75rem', margin: '0 15px' }} />brothersguitars.india
                 </a>
             </h4>
-            <link href={fontUrl} rel="stylesheet" /> {/* Include the font */}
         </div>
     );
-}
+};
 
 export default Products;
