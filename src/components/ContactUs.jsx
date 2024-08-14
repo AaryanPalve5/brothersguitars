@@ -13,17 +13,14 @@ function ContactUs() {
             padding: '0',
             margin: '0',
             width: '100%',
-            minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',
             overflowX: 'hidden', // Prevent horizontal overflow
             fontFamily: 'Roboto, sans-serif',
         },
         contentContainer: {
-            flex: '1',
             padding: '0 15px',
             margin: '0', // Ensure no extra margin is added
-            overflowX: 'hidden', // Prevent horizontal overflow for the content
         },
         heading: {
             fontFamily: 'Roboto, sans-serif',
@@ -32,7 +29,7 @@ function ContactUs() {
             color: 'white',
             marginBottom: '2rem',
             wordSpacing: '0.5em',
-            fontSize: '2rem', // Increased font size
+            fontSize: '2rem', // Consistent font size
             letterSpacing: '-1px',
             paddingTop: '2rem',
         },
@@ -74,9 +71,9 @@ function ContactUs() {
         footerText: {
             fontFamily: 'Roboto, sans-serif',
             color: '#fff',
-            fontSize: '1.2rem',
+            fontSize: '1rem',
             margin: '0', 
-            padding: '1rem 0', 
+            padding: '0.5rem 0', 
             textAlign: 'center',
             backgroundColor: '#000',
         },
@@ -84,7 +81,7 @@ function ContactUs() {
 
     return (
         <div id="contact-us" style={styles.container}>
-            <div className="container-fluid" style={styles.contentContainer}>
+            <div className="container">
                 <h1 style={styles.heading}>CONTACT US</h1>
                 <div className="row">
                     <div className="col-md-6">

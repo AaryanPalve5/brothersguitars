@@ -12,15 +12,15 @@ const Reviews = () => {
     return (
         <section id="reviews" className="container my-4" style={sectionStyle}>
             <h2 className="text-start mb-4" style={{ 
-        fontFamily: 'Roboto,Playfair Display, serif',
-        fontWeight: 700, // Bold
-        textAlign: 'left',
-        color: '#333',
-        marginBottom: '2rem',
+            fontFamily: 'Roboto,Playfair Display, serif',
+            fontWeight: 700, // Bold
+            textAlign: 'left',
+            color: '#333',
+            marginBottom: '2rem',
         
-        wordSpacing: '0.5em',
-        fontSize: '2rem', // Increased font size
-        letterSpacing: '-1.5px',
+            wordSpacing: '0.5em',
+            fontSize: '2rem', // Increased font size
+            letterSpacing: '-1.5px',
             }}>
                 TESTIMONIALS AND REVIEWS
             </h2>
