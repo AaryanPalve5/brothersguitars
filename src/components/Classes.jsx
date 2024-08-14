@@ -6,7 +6,8 @@ import flute1 from '../assets/flute2.jpg';
 import keyboard1 from '../assets/keyboard3.jpg';
 import tabla from '../assets/tabla.jpg';
 import mic from '../assets/mic1.jpg';
-import certificationImg from '../assets/rsl.jpg'; // Add your image here
+import certificationImg from '../assets/rsl.jpg'; 
+import techno from '../assets/techno.jpg'; 
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const fontUrl = "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
@@ -70,7 +71,15 @@ const Classes = () => {
                         We conduct regular certification exams and are also affiliated with the Rock School of London.
                     </p>
 
-                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, color: 'black', fontSize: '1.35rem', margin: '20px', maxWidth: '60%' }}>
+                    
+                </div>
+                <div className="col-lg-4 col-md-5 d-flex align-items-center">
+                    <img src={certificationImg} alt="Certification" style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '10px', padding: '10px', }} loading="lazy" />
+                </div>
+                
+                <div className="col-lg-8 col-md-7">
+                    
+                    <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, color: 'black', fontSize: '1.35rem', margin: '20px', maxWidth: '60%',padding: '10px', }}>
                         We have supplied musical instruments to 
                         <ul>
                             <li>The Academy School</li>
@@ -80,7 +89,7 @@ const Classes = () => {
                     </p>
                 </div>
                 <div className="col-lg-4 col-md-5 d-flex align-items-center">
-                    <img src={certificationImg} alt="Certification" style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '10px' }} loading="lazy" />
+                    <img src={techno} alt="Certification" style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '10px' }} loading="lazy" />
                 </div>
             </div>
 
