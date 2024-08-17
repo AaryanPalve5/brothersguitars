@@ -81,12 +81,12 @@ const Classes = () => {
                     
                     <p style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 500, color: 'black', fontSize: '1.35rem', margin: '20px', maxWidth: '60%',padding: '10px', }}>
                         We have supplied musical instruments to 
-                        <ul>
+                        
+                    </p><ul>
                             <li>The Academy School</li>
                             <li>Kendriya Vidyalaya</li>
                             <li>GG International</li>
                         </ul>
-                    </p>
                 </div>
                 <div className="col-lg-4 col-md-5 d-flex align-items-center">
                     <img src={techno} alt="Certification" style={{ width: '100%', maxWidth: '500px', height: 'auto', borderRadius: '10px' }} loading="lazy" />
